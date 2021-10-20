@@ -1,0 +1,23 @@
+<?php
+    $host = 'localhost';
+    $username = 'root';
+    $password = 'zsmm';
+    $dbname = 'mydb_one';
+    $mysql = new Mysqli($host,$username,$password,$dbname);
+    if ($mysql -> connect_errno) {
+        die('数据库连接失败: ' . $mysql->connect_errno);
+    }else {
+        echo '成功';
+        $mysql -> set_charset('UTF-8'); // 设置数据库字符集
+        $sql = 'select pid,name,price from phone_table'; // SQL语句
+        $result = $mysql -> query($sql); //执行上面的SQL语句
+
+        //$data = $result -> fetch_all();
+        $data = $result -> fetch_row(); // 以索引数组的形式返回
+        $mysql -> close();
+    }
+    echo '<pre>';
+    print_r($data);
+
+//    echo '------------------------<br>';
+//    print_r($data[0]);
