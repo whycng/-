@@ -15,5 +15,15 @@ else
     echo "数据库连接成功"."<br/>";
 //echo $link;
 $result = mysqli_query($link,'SELECT * FROM phone_table');
-echo $result;
+if ($result){
+    echo '$result is ok</br>';
+    while ( $row = mysqli_fetch_assoc($result) ) {
+        echo $row['name'], "&nbsp;", "</br>";
+    }
+}
+mysqli_free_result($result);
+
+mysqli_close($link);
 // png
+
+
