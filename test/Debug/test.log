@@ -1,0 +1,6 @@
+﻿  2move.cpp
+f:\vs\proj\test\test\2move.cpp(40): warning C4101: “j”: 未引用的局部变量
+f:\vs\proj\test\test\2move.cpp(34): warning C4101: “n”: 未引用的局部变量
+  star.cpp
+  正在生成代码...
+  test.vcxproj -> F:\vs\proJ\test\Debug\test.exe
